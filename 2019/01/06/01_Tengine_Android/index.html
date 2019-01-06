@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="01 Tengine_Android（20181205）1、open the existing project2、运行可能会显示：NDK not configured.这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。根据网上的一些讨论和博客发现遇到这个问题可以尝试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/01_Tengine_Android/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="01 Tengine_Android（20181205）1、open the existing project2、运行可能会显示：NDK not configured.这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。根据网上的一些讨论和博客发现遇到这个问题可以尝试">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片1.png">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片2.png">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片3.png">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片4.png">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片5.png">
+<meta property="og:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片6.png">
+<meta property="og:updated_time" content="2018-12-25T14:42:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="01 Tengine_Android（20181205）1、open the existing project2、运行可能会显示：NDK not configured.这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。根据网上的一些讨论和博客发现遇到这个问题可以尝试">
+<meta name="twitter:image" content="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-01_Tengine_Android" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/06/01_Tengine_Android/" class="article-date">
+  <time datetime="2019-01-06T14:14:41.506Z" itemprop="datePublished">2019-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="01-Tengine-Android（20181205）"><a href="#01-Tengine-Android（20181205）" class="headerlink" title="01 Tengine_Android（20181205）"></a>01 Tengine_Android（20181205）</h1><p>1、open the existing project<br><br>2、运行可能会显示：NDK not configured.<br><br>这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片1.png" alt=""><br><br>根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。<br><br><a href="https://blog.csdn.net/xwq911/article/details/41823947" target="_blank" rel="noopener">https://blog.csdn.net/xwq911/article/details/41823947</a><br></p>
+<p>3、运行时可能还会显示错误：Failed to find Cmake.<br><br>这也是更新问题，SDK manager 当中需要安装这几个更新：NDK,LLDB,CMake<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片2.png" alt=""><br><br><a href="https://blog.csdn.net/weixin_41189380/article/details/79049045" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41189380/article/details/79049045</a><br><br>（据说gradle failed是经常的事情，还有上述更新的问题与网络有关，多试几次就过去了）<br></p>
+<p>4、以上是在configure build上遇到的问题，上述解决办法可以排除这几个问题configure build成功，但是在Run tasks的时候又会遇到不同的问题：<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片3.png" alt=""><br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片4.png" alt=""><br><br>阅读错误提示以后发现这是大概由于缺少了libtengine.so文件，于是乎我们就要去阅读一下tengine的东西：<br><br>build_android文档链接如下：<br><br><a href="https://github.com/OAID/Tengine/blob/master/doc/build_android.md" target="_blank" rel="noopener">https://github.com/OAID/Tengine/blob/master/doc/build_android.md</a><br></p>
+<p>根据我的理解，按照上述说明结合例程大致意思是这样：<br><br>（1）首先需要编译Tengine（这部分需要在linux系统下面操作，我的ubuntu系统尚且搞    不懂，所以下面说的so文件是从公司那里拿的开源文件），生成一个libtengine.so    文件，将其放在以下目录：<br><br>project目录/app/src/main/jnilibs/libtengine.so<br><br>这样以后可以将整个工程文件编译成功，包括Run tasks部分<br></p>
+<p>（2）其次，有一些文件需要准备：<br><br>【1】生成的模型文件：frozen_mobilenet_v1_224.pb（.pb文件是指tensorflow框架     下训练的模型，与此类似的有caffemodel文件的caffe模型,还有其他各种框架）<br><br>【2】测试数据集：<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片5.png" alt=""><br><br>【3】label标签文件：synset_words.txt<br></p>
+<p>（3）根据build_android文档说明的第7、8步需要将上述所说的数据通过adb传输到手机    上，不过文档当中说的要install adb与adb_driver都是不需要的，因为Android     Studio软件已经帮我们安装好了这些，具体地址在SDK安装目录下面（这个具体后面    部分会说）：C:\Users\yuyelong\AppData\Local\Android\Sdk\platform-tools<br><br>（：这里先说一下，一开始我因为不知道流程所以将上述文件都放在电脑端的project    工程文件夹下面，结果运行的时候出现错误：</p>
+<p>（4）那就说说怎么使用adb传输file到手机上吧，实际上可以进行双向传输：教程可以参考：<a href="http://adbshell.com/commands/adb-devices" target="_blank" rel="noopener">http://adbshell.com/commands/adb-devices</a><br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片6.png" alt=""></p>
+<p>5、在将一些文件通过adb传送至手机上以后，就可以将工程进行下载到手机上了，结果总是好的!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/06/01_Tengine_Android/" data-id="cjqkzbnob0001isq02g53euzq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/06/02_Android+OpenCV/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/06/00_Some problems when installing Android Studio/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/06/02_Android+OpenCV/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/01_Tengine_Android/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/00_Some problems when installing Android Studio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/English/">English</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

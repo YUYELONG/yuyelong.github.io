@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="00 Some problems when installing Android StudioProblem1：no emulator installed这个问题可能是因为没有把电脑上的杀毒软件关掉，导致运行模拟器的时候被移除了。衷心希望大家不要遇到我这个问题!12SDK folder location：C:\Users\yuyelong\AppData\Local\Android\Sdk\ext">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/00_Some problems when installing Android Studio/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="00 Some problems when installing Android StudioProblem1：no emulator installed这个问题可能是因为没有把电脑上的杀毒软件关掉，导致运行模拟器的时候被移除了。衷心希望大家不要遇到我这个问题!12SDK folder location：C:\Users\yuyelong\AppData\Local\Android\Sdk\ext">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-25T14:42:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="00 Some problems when installing Android StudioProblem1：no emulator installed这个问题可能是因为没有把电脑上的杀毒软件关掉，导致运行模拟器的时候被移除了。衷心希望大家不要遇到我这个问题!12SDK folder location：C:\Users\yuyelong\AppData\Local\Android\Sdk\ext">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-00_Some problems when installing Android Studio" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/06/00_Some problems when installing Android Studio/" class="article-date">
+  <time datetime="2019-01-06T14:14:41.505Z" itemprop="datePublished">2019-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="00-Some-problems-when-installing-Android-Studio"><a href="#00-Some-problems-when-installing-Android-Studio" class="headerlink" title="00 Some problems when installing Android Studio"></a>00 Some problems when installing Android Studio</h1><h2 id="Problem1：no-emulator-installed"><a href="#Problem1：no-emulator-installed" class="headerlink" title="Problem1：no emulator installed"></a>Problem1：no emulator installed</h2><p>这个问题可能是因为没有把电脑上的杀毒软件关掉，导致运行模拟器的时候被移除了。衷心希望大家不要遇到我这个问题!<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SDK folder location：</span><br><span class="line">C:\Users\yuyelong\AppData\Local\Android\Sdk\extras\intel\Hardware_Accelerated_Execution_Manager</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“emulator” and ”system-images” folder is located at:</span><br><span class="line">C:\Users\yuyelong\AppData\Local\Android\Sdk</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/40181450/android-studio-emulator-error-intel-haxm-is-required-no-emulator-installed" target="_blank" rel="noopener">https://stackoverflow.com/questions/40181450/android-studio-emulator-error-intel-haxm-is-required-no-emulator-installed</a></p>
+<h2 id="Problem2：enable-VT-Intel-virtualization-technology-x-in-your-bios-security"><a href="#Problem2：enable-VT-Intel-virtualization-technology-x-in-your-bios-security" class="headerlink" title="Problem2：enable VT ( Intel virtualization technology)-x in your bios security"></a>Problem2：enable VT ( Intel virtualization technology)-x in your bios security</h2><p>进入BIOS将Intel virtualization technology这一项使能即可。<br><a href="https://www.cnblogs.com/sunyl/p/5915144.html" target="_blank" rel="noopener">https://www.cnblogs.com/sunyl/p/5915144.html</a></p>
+<h2 id="针对oppo-r11手机Android-Studio的一次开发经历（调用摄像头20181128）"><a href="#针对oppo-r11手机Android-Studio的一次开发经历（调用摄像头20181128）" class="headerlink" title="针对oppo r11手机Android Studio的一次开发经历（调用摄像头20181128）"></a>针对oppo r11手机Android Studio的一次开发经历（调用摄像头20181128）</h2><p>1、使用butterknife<br><br><a href="https://blog.csdn.net/qq_31852701/article/details/80312719" target="_blank" rel="noopener">https://blog.csdn.net/qq_31852701/article/details/80312719</a><br><br><a href="https://blog.csdn.net/qq_33792946/article/details/53816552" target="_blank" rel="noopener">https://blog.csdn.net/qq_33792946/article/details/53816552</a><br><br><a href="https://blog.csdn.net/u010937230/article/details/60762472" target="_blank" rel="noopener">https://blog.csdn.net/u010937230/article/details/60762472</a><br><br><a href="https://blog.csdn.net/androidwubo/article/details/78835706" target="_blank" rel="noopener">https://blog.csdn.net/androidwubo/article/details/78835706</a><br><br><a href="https://blog.csdn.net/qq_31852701/article/details/80312719" target="_blank" rel="noopener">https://blog.csdn.net/qq_31852701/article/details/80312719</a><br></p>
+<p>2、activity code:<br><br><a href="https://blog.csdn.net/qq_33792946/article/details/54094307" target="_blank" rel="noopener">https://blog.csdn.net/qq_33792946/article/details/54094307</a><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">package com.example.yuyelong.helloword;</span><br><span class="line"></span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.graphics.Bitmap;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.ImageView;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line">import butterknife.ButterKnife;</span><br><span class="line">import butterknife.OnClick;</span><br><span class="line"></span><br><span class="line">public class HelloWorldActivity extends AppCompatActivity &#123;</span><br><span class="line">    @BindView(R.id.button_1)</span><br><span class="line">    Button button_1;</span><br><span class="line">    @BindView(R.id.imageIV)</span><br><span class="line">    ImageView imageIV;</span><br><span class="line"></span><br><span class="line">    private final int CAMERA_REQUEST = 8888;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_hello_world);</span><br><span class="line">        ButterKnife.bind(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @OnClick(R.id.button_1)</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);</span><br><span class="line">        startActivityForResult(cameraIntent, CAMERA_REQUEST);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onActivityResult(int requestCode, int resultCode, Intent data) &#123;</span><br><span class="line">        if (requestCode == CAMERA_REQUEST &amp;&amp; resultCode == RESULT_OK) &#123;</span><br><span class="line">            Bitmap photo = (Bitmap) data.getExtras().get(&quot;data&quot;);</span><br><span class="line">            imageIV.setImageBitmap(photo);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、针对oppo r11手机安装apk问题：<br><br>在gradle.properties上加一句：这样以后安装没问题，但是还是会出现闪退的现象。<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android.injected.testOnly=false</span><br></pre></td></tr></table></figure></p>
+<p>oppo手机安装apk后闪退的处理：<br><br><a href="https://blog.csdn.net/zhao8856234/article/details/79958867" target="_blank" rel="noopener">https://blog.csdn.net/zhao8856234/article/details/79958867</a><br></p>
+<p>生成签名文件请参考《第一行代码》15.1<br><br>其中key store path的路径除了文件夹再加上自己的新命名jks文件即可 <br></p>
+<p>4、打开oppo手机的开发者选项参考：版本号点五下，还有这种骚操作真是<br><br><a href="https://jingyan.baidu.com/article/a501d80c37cc83ec620f5e5d.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/a501d80c37cc83ec620f5e5d.html</a><br><br><a href="https://blog.csdn.net/yeyuewushang/article/details/80179803" target="_blank" rel="noopener">https://blog.csdn.net/yeyuewushang/article/details/80179803</a><br></p>
+<p>5、结果</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/06/00_Some problems when installing Android Studio/" data-id="cjqkzbno70000isq0derge99u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/06/01_Tengine_Android/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/06/English/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">English</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/06/02_Android+OpenCV/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/01_Tengine_Android/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/00_Some problems when installing Android Studio/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/English/">English</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
