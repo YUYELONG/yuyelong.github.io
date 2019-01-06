@@ -70,10 +70,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-02_Android+OpenCV" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-0" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/01/06/02_Android+OpenCV/" class="article-date">
-  <time datetime="2019-01-06T14:14:41.508Z" itemprop="datePublished">2019-01-06</time>
+    <a href="/2019/01/06/0/" class="article-date">
+  <time datetime="2019-01-06T15:01:22.000Z" itemprop="datePublished">2019-01-06</time>
 </a>
     
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/06/02_Android+OpenCV/">Android+OpenCV</a>
+      <a class="article-title" href="/2019/01/06/0/">00 Some problems when installing Android Studio</a>
     </h1>
   
 
@@ -92,179 +92,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="02-Android-OpenCV-20181216"><a href="#02-Android-OpenCV-20181216" class="headerlink" title="02 Android+OpenCV(20181216)"></a>02 Android+OpenCV(20181216)</h1><h2 id="一、安装OpenCV过程："><a href="#一、安装OpenCV过程：" class="headerlink" title="一、安装OpenCV过程："></a>一、安装OpenCV过程：</h2><p>安装教程网上很多，我一开始参考的是以下这篇博文：<br><a href="https://blog.csdn.net/gao_chun/article/details/49359535" target="_blank" rel="noopener">https://blog.csdn.net/gao_chun/article/details/49359535</a><br>但是这里有两个问题：<br><br>
+        <p>To introduce some problems when installing the software of AS, and a simple demo applied in OPPO R11.<br>
         
           </p><p class="article-more-link">
-            <a href="/2019/01/06/02_Android+OpenCV/#more">Read More</a>
+            <a href="/2019/01/06/0/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/02_Android+OpenCV/" data-id="cjql0mmw40003rkq04iyj5ko2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/06/0/" data-id="cjql1dd8s00005wq0lmllpj1l" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 
-
-  
-    <article id="post-01_Tengine_Android" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/06/01_Tengine_Android/" class="article-date">
-  <time datetime="2019-01-06T14:14:41.506Z" itemprop="datePublished">2019-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="01-Tengine-Android（20181205）"><a href="#01-Tengine-Android（20181205）" class="headerlink" title="01 Tengine_Android（20181205）"></a>01 Tengine_Android（20181205）</h1><p>1、open the existing project<br><br>2、运行可能会显示：NDK not configured.<br><br>这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片1.png" alt=""><br><br>根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。<br><br><a href="https://blog.csdn.net/xwq911/article/details/41823947" target="_blank" rel="noopener">https://blog.csdn.net/xwq911/article/details/41823947</a><br></p>
-<p>3、运行时可能还会显示错误：Failed to find Cmake.<br><br>这也是更新问题，SDK manager 当中需要安装这几个更新：NDK,LLDB,CMake<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片2.png" alt=""><br><br><a href="https://blog.csdn.net/weixin_41189380/article/details/79049045" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41189380/article/details/79049045</a><br><br>（据说gradle failed是经常的事情，还有上述更新的问题与网络有关，多试几次就过去了）<br></p>
-<p>4、以上是在configure build上遇到的问题，上述解决办法可以排除这几个问题configure build成功，但是在Run tasks的时候又会遇到不同的问题：<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片3.png" alt=""><br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片4.png" alt=""><br><br>阅读错误提示以后发现这是大概由于缺少了libtengine.so文件，于是乎我们就要去阅读一下tengine的东西：<br><br>build_android文档链接如下：<br><br><a href="https://github.com/OAID/Tengine/blob/master/doc/build_android.md" target="_blank" rel="noopener">https://github.com/OAID/Tengine/blob/master/doc/build_android.md</a><br></p>
-<p>根据我的理解，按照上述说明结合例程大致意思是这样：<br><br>（1）首先需要编译Tengine（这部分需要在linux系统下面操作，我的ubuntu系统尚且搞    不懂，所以下面说的so文件是从公司那里拿的开源文件），生成一个libtengine.so    文件，将其放在以下目录：<br><br>project目录/app/src/main/jnilibs/libtengine.so<br><br>这样以后可以将整个工程文件编译成功，包括Run tasks部分<br></p>
-<p>（2）其次，有一些文件需要准备：<br><br>【1】生成的模型文件：frozen_mobilenet_v1_224.pb（.pb文件是指tensorflow框架     下训练的模型，与此类似的有caffemodel文件的caffe模型,还有其他各种框架）<br><br>【2】测试数据集：<br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片5.png" alt=""><br><br>【3】label标签文件：synset_words.txt<br></p>
-<p>（3）根据build_android文档说明的第7、8步需要将上述所说的数据通过adb传输到手机    上，不过文档当中说的要install adb与adb_driver都是不需要的，因为Android     Studio软件已经帮我们安装好了这些，具体地址在SDK安装目录下面（这个具体后面    部分会说）：C:\Users\yuyelong\AppData\Local\Android\Sdk\platform-tools<br><br>（：这里先说一下，一开始我因为不知道流程所以将上述文件都放在电脑端的project    工程文件夹下面，结果运行的时候出现错误：</p>
-<p>（4）那就说说怎么使用adb传输file到手机上吧，实际上可以进行双向传输：教程可以参考：<a href="http://adbshell.com/commands/adb-devices" target="_blank" rel="noopener">http://adbshell.com/commands/adb-devices</a><br><br><img src="https://github.com/YUYELONG/Summary-of-Arm-Competition/blob/master/01_Tengine_Android_Pic/图片6.png" alt=""></p>
-<p>5、在将一些文件通过adb传送至手机上以后，就可以将工程进行下载到手机上了，结果总是好的!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/01_Tengine_Android/" data-id="cjql0mmvv0000rkq0e6f2hjos" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-00_Some problems when installing Android Studio" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/06/00_Some problems when installing Android Studio/" class="article-date">
-  <time datetime="2019-01-06T14:14:41.505Z" itemprop="datePublished">2019-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="00-Some-problems-when-installing-Android-Studio"><a href="#00-Some-problems-when-installing-Android-Studio" class="headerlink" title="00 Some problems when installing Android Studio"></a>00 Some problems when installing Android Studio</h1><h2 id="Problem1：no-emulator-installed"><a href="#Problem1：no-emulator-installed" class="headerlink" title="Problem1：no emulator installed"></a>Problem1：no emulator installed</h2><p>这个问题可能是因为没有把电脑上的杀毒软件关掉，导致运行模拟器的时候被移除了。衷心希望大家不要遇到我这个问题!<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">SDK folder location：</span><br><span class="line">C:\Users\yuyelong\AppData\Local\Android\Sdk\extras\intel\Hardware_Accelerated_Execution_Manager</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“emulator” and ”system-images” folder is located at:</span><br><span class="line">C:\Users\yuyelong\AppData\Local\Android\Sdk</span><br></pre></td></tr></table></figure>
-<p><a href="https://stackoverflow.com/questions/40181450/android-studio-emulator-error-intel-haxm-is-required-no-emulator-installed" target="_blank" rel="noopener">https://stackoverflow.com/questions/40181450/android-studio-emulator-error-intel-haxm-is-required-no-emulator-installed</a></p>
-<h2 id="Problem2：enable-VT-Intel-virtualization-technology-x-in-your-bios-security"><a href="#Problem2：enable-VT-Intel-virtualization-technology-x-in-your-bios-security" class="headerlink" title="Problem2：enable VT ( Intel virtualization technology)-x in your bios security"></a>Problem2：enable VT ( Intel virtualization technology)-x in your bios security</h2><p>进入BIOS将Intel virtualization technology这一项使能即可。<br><a href="https://www.cnblogs.com/sunyl/p/5915144.html" target="_blank" rel="noopener">https://www.cnblogs.com/sunyl/p/5915144.html</a></p>
-<h2 id="针对oppo-r11手机Android-Studio的一次开发经历（调用摄像头20181128）"><a href="#针对oppo-r11手机Android-Studio的一次开发经历（调用摄像头20181128）" class="headerlink" title="针对oppo r11手机Android Studio的一次开发经历（调用摄像头20181128）"></a>针对oppo r11手机Android Studio的一次开发经历（调用摄像头20181128）</h2><p>1、使用butterknife<br><br><a href="https://blog.csdn.net/qq_31852701/article/details/80312719" target="_blank" rel="noopener">https://blog.csdn.net/qq_31852701/article/details/80312719</a><br><br><a href="https://blog.csdn.net/qq_33792946/article/details/53816552" target="_blank" rel="noopener">https://blog.csdn.net/qq_33792946/article/details/53816552</a><br><br><a href="https://blog.csdn.net/u010937230/article/details/60762472" target="_blank" rel="noopener">https://blog.csdn.net/u010937230/article/details/60762472</a><br><br><a href="https://blog.csdn.net/androidwubo/article/details/78835706" target="_blank" rel="noopener">https://blog.csdn.net/androidwubo/article/details/78835706</a><br><br><a href="https://blog.csdn.net/qq_31852701/article/details/80312719" target="_blank" rel="noopener">https://blog.csdn.net/qq_31852701/article/details/80312719</a><br></p>
-<p>2、activity code:<br><br><a href="https://blog.csdn.net/qq_33792946/article/details/54094307" target="_blank" rel="noopener">https://blog.csdn.net/qq_33792946/article/details/54094307</a><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">package com.example.yuyelong.helloword;</span><br><span class="line"></span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.graphics.Bitmap;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.ImageView;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line">import butterknife.ButterKnife;</span><br><span class="line">import butterknife.OnClick;</span><br><span class="line"></span><br><span class="line">public class HelloWorldActivity extends AppCompatActivity &#123;</span><br><span class="line">    @BindView(R.id.button_1)</span><br><span class="line">    Button button_1;</span><br><span class="line">    @BindView(R.id.imageIV)</span><br><span class="line">    ImageView imageIV;</span><br><span class="line"></span><br><span class="line">    private final int CAMERA_REQUEST = 8888;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_hello_world);</span><br><span class="line">        ButterKnife.bind(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @OnClick(R.id.button_1)</span><br><span class="line">    public void onClick() &#123;</span><br><span class="line">        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);</span><br><span class="line">        startActivityForResult(cameraIntent, CAMERA_REQUEST);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onActivityResult(int requestCode, int resultCode, Intent data) &#123;</span><br><span class="line">        if (requestCode == CAMERA_REQUEST &amp;&amp; resultCode == RESULT_OK) &#123;</span><br><span class="line">            Bitmap photo = (Bitmap) data.getExtras().get(&quot;data&quot;);</span><br><span class="line">            imageIV.setImageBitmap(photo);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3、针对oppo r11手机安装apk问题：<br><br>在gradle.properties上加一句：这样以后安装没问题，但是还是会出现闪退的现象。<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android.injected.testOnly=false</span><br></pre></td></tr></table></figure></p>
-<p>oppo手机安装apk后闪退的处理：<br><br><a href="https://blog.csdn.net/zhao8856234/article/details/79958867" target="_blank" rel="noopener">https://blog.csdn.net/zhao8856234/article/details/79958867</a><br></p>
-<p>生成签名文件请参考《第一行代码》15.1<br><br>其中key store path的路径除了文件夹再加上自己的新命名jks文件即可 <br></p>
-<p>4、打开oppo手机的开发者选项参考：版本号点五下，还有这种骚操作真是<br><br><a href="https://jingyan.baidu.com/article/a501d80c37cc83ec620f5e5d.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/a501d80c37cc83ec620f5e5d.html</a><br><br><a href="https://blog.csdn.net/yeyuewushang/article/details/80179803" target="_blank" rel="noopener">https://blog.csdn.net/yeyuewushang/article/details/80179803</a><br></p>
-<p>5、结果</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/00_Some problems when installing Android Studio/" data-id="cjql0mmw00001rkq0hsvyebdx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-English" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/06/English/" class="article-date">
-  <time datetime="2019-01-06T13:20:54.000Z" itemprop="datePublished">2019-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/06/English/">English</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>终于建立了自己的博客~<br>经过了无限次操作，终于拥有了自己的博客~</p>
-<h1 id="Dillinger"><a href="#Dillinger" class="headerlink" title="Dillinger"></a>Dillinger</h1><p><a href="https://nodesource.com/products/nsolid" target="_blank" rel="noopener"><img src="https://cldup.com/dTxpPi9lDf.thumb.png" alt="N|Solid"></a></p>
-<p><a href="https://travis-ci.org/joemccann/dillinger" target="_blank" rel="noopener"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"></a></p>
-<p>Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.</p>
-<ul>
-<li>Type some Markdown on the left</li>
-<li>See HTML in the right</li>
-<li>Magic</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/English/" data-id="cjql0mmw20002rkq0c3pryaf0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/06/hello-world/" class="article-date">
-  <time datetime="2019-01-06T08:45:40.442Z" itemprop="datePublished">2019-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/hello-world/" data-id="cjql0mmw50004rkq0j1cpa0hw" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -282,9 +123,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -303,23 +158,7 @@
       <ul>
         
           <li>
-            <a href="/2019/01/06/02_Android+OpenCV/">Android+OpenCV</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/06/01_Tengine_Android/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/06/00_Some problems when installing Android Studio/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/06/English/">English</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/06/hello-world/">Hello World</a>
+            <a href="/2019/01/06/0/">00 Some problems when installing Android Studio</a>
           </li>
         
       </ul>
