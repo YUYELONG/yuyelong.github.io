@@ -5,20 +5,20 @@
   
 
   
-  <title>Blog of Y.L.YU</title>
+  <title>Android+OpenCV | Blog of Y.L.YU</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：（1）他的示例代码中没有给全，实际上要能够运行的话需要在前面添加许多import库，比如博客里面的代码需要添加：（可以根据底下的错误提示来选择">
+  <meta name="description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：">
 <meta name="keywords" content="Life,Study,Work,AI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog of Y.L.YU">
+<meta property="og:title" content="Android+OpenCV">
 <meta property="og:url" content="http://yoursite.com/2019/01/06/02_Android+OpenCV/index.html">
 <meta property="og:site_name" content="Blog of Y.L.YU">
-<meta property="og:description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：（1）他的示例代码中没有给全，实际上要能够运行的话需要在前面添加许多import库，比如博客里面的代码需要添加：（可以根据底下的错误提示来选择">
+<meta property="og:description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T14:42:12.000Z">
+<meta property="og:updated_time" content="2019-01-06T14:51:11.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Y.L.YU">
-<meta name="twitter:description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：（1）他的示例代码中没有给全，实际上要能够运行的话需要在前面添加许多import库，比如博客里面的代码需要添加：（可以根据底下的错误提示来选择">
+<meta name="twitter:title" content="Android+OpenCV">
+<meta name="twitter:description" content="02 Android+OpenCV(20181216)一、安装OpenCV过程：安装教程网上很多，我一开始参考的是以下这篇博文：https://blog.csdn.net/gao_chun/article/details/49359535但是这里有两个问题：">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Y.L.YU" type="application/atom+xml">
   
@@ -79,9 +79,20 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android+OpenCV
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="02-Android-OpenCV-20181216"><a href="#02-Android-OpenCV-20181216" class="headerlink" title="02 Android+OpenCV(20181216)"></a>02 Android+OpenCV(20181216)</h1><h2 id="一、安装OpenCV过程："><a href="#一、安装OpenCV过程：" class="headerlink" title="一、安装OpenCV过程："></a>一、安装OpenCV过程：</h2><p>安装教程网上很多，我一开始参考的是以下这篇博文：<br><a href="https://blog.csdn.net/gao_chun/article/details/49359535" target="_blank" rel="noopener">https://blog.csdn.net/gao_chun/article/details/49359535</a><br>但是这里有两个问题：<br><br>（1）他的示例代码中没有给全，实际上要能够运行的话需要在前面添加许多import库，比如博客里面的代码需要添加：（可以根据底下的错误提示来选择）<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">package com.tengine.openailab.mobilenet;</span><br><span class="line"></span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.graphics.BitmapFactory;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.graphics.Bitmap;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.ImageView;</span><br><span class="line">import android.util.Log;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line"></span><br><span class="line">import org.opencv.android.BaseLoaderCallback;</span><br><span class="line">import org.opencv.android.LoaderCallbackInterface;</span><br><span class="line">import org.opencv.android.OpenCVLoader;</span><br><span class="line">import org.opencv.android.Utils;</span><br><span class="line">import org.opencv.core.Mat;</span><br><span class="line">import org.opencv.imgproc.Imgproc;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="02-Android-OpenCV-20181216"><a href="#02-Android-OpenCV-20181216" class="headerlink" title="02 Android+OpenCV(20181216)"></a>02 Android+OpenCV(20181216)</h1><h2 id="一、安装OpenCV过程："><a href="#一、安装OpenCV过程：" class="headerlink" title="一、安装OpenCV过程："></a>一、安装OpenCV过程：</h2><p>安装教程网上很多，我一开始参考的是以下这篇博文：<br><a href="https://blog.csdn.net/gao_chun/article/details/49359535" target="_blank" rel="noopener">https://blog.csdn.net/gao_chun/article/details/49359535</a><br>但是这里有两个问题：<br><br><a id="more"></a></p>
+<p>（1）他的示例代码中没有给全，实际上要能够运行的话需要在前面添加许多import库，比如博客里面的代码需要添加：（可以根据底下的错误提示来选择）<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">package com.tengine.openailab.mobilenet;</span><br><span class="line"></span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.graphics.BitmapFactory;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.graphics.Bitmap;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.ImageView;</span><br><span class="line">import android.util.Log;</span><br><span class="line"></span><br><span class="line">import butterknife.BindView;</span><br><span class="line"></span><br><span class="line">import org.opencv.android.BaseLoaderCallback;</span><br><span class="line">import org.opencv.android.LoaderCallbackInterface;</span><br><span class="line">import org.opencv.android.OpenCVLoader;</span><br><span class="line">import org.opencv.android.Utils;</span><br><span class="line">import org.opencv.core.Mat;</span><br><span class="line">import org.opencv.imgproc.Imgproc;</span><br></pre></td></tr></table></figure></p>
 <p>（2）第二个没有解决的问题是OpenCV manager安装的问题，上面博客里面提到了这一点，但是没有说如何解决，在实际运行当中如果没有安装这个会在手机上运行的时候出现下面的错误提示：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Package not found</span><br><span class="line"></span><br><span class="line">OpenCV is not ready</span><br></pre></td></tr></table></figure></p>
 <p>而且这个OpenCV manager已经显示下架了，想安装也装不上（oppo手机如此），于是需要另寻他解，有许多博客说不用安装manager也可以实现，但是最后各种方法试下来，下面这种方法是我最终成功的：<br><a href="https://www.cnblogs.com/tail/p/4618790.html" target="_blank" rel="noopener">https://www.cnblogs.com/tail/p/4618790.html</a><br>意思是OpenCV在AS3.0版本里所给出的示例程序就说可以免OpenCV安装，它在初始代码里面的onResume函数当中是这样写的：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public void onResume()</span><br><span class="line">    &#123;</span><br><span class="line">        super.onResume();</span><br><span class="line">        if (!OpenCVLoader.initDebug()) &#123;</span><br><span class="line">            Log.d(TAG, &quot;Internal OpenCV library not found. Using OpenCV Manager for initialization&quot;);</span><br><span class="line">            OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, mLoaderCallback);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Log.d(TAG, &quot;OpenCV library found inside package. Using it!&quot;);</span><br><span class="line">            mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p>直接替换亲测有效。</p>
@@ -96,7 +107,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/02_Android+OpenCV/" data-id="cjql0dohw0001zwq09qj69gg2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/06/02_Android+OpenCV/" data-id="cjql0mmw40003rkq04iyj5ko2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -145,7 +156,7 @@
       <ul>
         
           <li>
-            <a href="/2019/01/06/02_Android+OpenCV/">(no title)</a>
+            <a href="/2019/01/06/02_Android+OpenCV/">Android+OpenCV</a>
           </li>
         
           <li>
