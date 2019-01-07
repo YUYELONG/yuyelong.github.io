@@ -15,17 +15,17 @@
 <meta property="og:site_name" content="Blog of Y.L.YU">
 <meta property="og:description" content="1、open the existing project2、运行可能会显示：NDK not configured.这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。https://b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/01/07/1/‪/img/pic1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/07/1/pic1.png">
 <meta property="og:image" content="http://yoursite.com/img/pic2.png">
 <meta property="og:image" content="f:/Git/Git/Hexo/source/img/pic3.png">
 <meta property="og:image" content="f:/Git/Git/Hexo/source/img/pic4.png">
 <meta property="og:image" content="f:/Git/Git/Hexo/source/img/pic5.png">
 <meta property="og:image" content="f:/Git/Git/Hexo/source/img/pic6.png">
-<meta property="og:updated_time" content="2019-01-07T12:15:24.211Z">
+<meta property="og:updated_time" content="2019-01-07T12:22:06.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01 Tengine_Android（20181205）">
 <meta name="twitter:description" content="1、open the existing project2、运行可能会显示：NDK not configured.这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。https://b">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/07/1/‪/img/pic1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/07/1/pic1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Y.L.YU" type="application/atom+xml">
   
@@ -98,7 +98,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、open the existing project<br><br>2、运行可能会显示：NDK not configured.<br><br>这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。<br><br><img src="‪/img/pic1.png" alt=""><br><br>根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。<br><br><a href="https://blog.csdn.net/xwq911/article/details/41823947" target="_blank" rel="noopener">https://blog.csdn.net/xwq911/article/details/41823947</a><br></p>
+        <p>1、open the existing project<br><br>2、运行可能会显示：NDK not configured.<br><br>这是由于SDK更新的问题，因为在SDK manager当中显示的就是在dl.google.com上下载的SDK更新，实际上我们用的都是国内网站，至于怎么上google进行下载也不清楚。<br><br><img src="/2019/01/07/1/pic1.png" title="pic1"><br><br>根据网上的一些讨论和博客发现遇到这个问题可以尝试修改一下hosts，这与翻墙可能有关。<br><br><a href="https://blog.csdn.net/xwq911/article/details/41823947" target="_blank" rel="noopener">https://blog.csdn.net/xwq911/article/details/41823947</a><br></p>
 <p>3、运行时可能还会显示错误：Failed to find Cmake.<br><br>这也是更新问题，SDK manager 当中需要安装这几个更新：NDK,LLDB,CMake<br><br><img src="/img/pic2.png" alt=""><br><br><a href="https://blog.csdn.net/weixin_41189380/article/details/79049045" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41189380/article/details/79049045</a><br><br>（据说gradle failed是经常的事情，还有上述更新的问题与网络有关，多试几次就过去了）<br></p>
 <p>4、以上是在configure build上遇到的问题，上述解决办法可以排除这几个问题configure build成功，但是在Run tasks的时候又会遇到不同的问题：<br><br><img src="F:/Git/Git/Hexo/source/img/pic3.png" alt=""><br><br><img src="F:/Git/Git/Hexo/source/img/pic4.png" alt=""><br><br>阅读错误提示以后发现这是大概由于缺少了libtengine.so文件，于是乎我们就要去阅读一下tengine的东西：<br><br>build_android文档链接如下：<br><br><a href="https://github.com/OAID/Tengine/blob/master/doc/build_android.md" target="_blank" rel="noopener">https://github.com/OAID/Tengine/blob/master/doc/build_android.md</a><br></p>
 <p>根据我的理解，按照上述说明结合例程大致意思是这样：<br><br>（1）首先需要编译Tengine（这部分需要在linux系统下面操作，我的ubuntu系统尚且搞不懂，所以下面说的so文件是从公司那里拿的开源文件），生成一个libtengine.so文件，将其放在以下目录：<br><br>project目录/app/src/main/jnilibs/libtengine.so<br><br>这样以后可以将整个工程文件编译成功，包括Run tasks部分<br></p>
@@ -110,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/07/1/" data-id="cjqmahr650001zgq0niqnpftm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/07/1/" data-id="cjqmaqjsv000120q0nl95j81x" class="article-share-link">Share</a>
       
       
     </footer>
